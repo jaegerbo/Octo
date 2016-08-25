@@ -1,4 +1,6 @@
-﻿using Octo.GameLogic;
+﻿using Octo.Basics;
+using Octo.GameLogic;
+using Octo.Map;
 using Octo.Objects;
 using System;
 using System.Collections.Generic;
@@ -33,9 +35,10 @@ namespace Octo
       public float X { get; set; }
       public float YStart { get; set; }
       public float Y { get; set; }
-      public int Width { get; set; }
-      public int Height { get; set; }
-      public Size Playgroundsize { get; set; }
+      public float Width { get; set; }
+      public float Height { get; set; }
+      //public Size Playgroundsize { get; set; }
+      public clsMap Map;
       public Color BackColor { get; set; }
       private Image _SpriteImage = null;
       public Image SpriteImage { get { return _SpriteImage; }
@@ -43,13 +46,13 @@ namespace Octo
             if (value != null)
             {
                _SpriteImage = value;
-               destRectangle = new Rectangle(0, 0, _SpriteImage.Width, _SpriteImage.Height);
-               srcRectangle = new Rectangle(0, 0, _SpriteImage.Width, _SpriteImage.Height);
+               destRectangle = new structRectangle(0, 0, _SpriteImage.Width, _SpriteImage.Height);
+               srcRectangle = new structRectangle(0, 0, _SpriteImage.Width, _SpriteImage.Height);
             }
          }
       }
-      public Rectangle  destRectangle { get; set; }
-      public Rectangle  srcRectangle { get; set; }
+      public structRectangle destRectangle { get; set; }
+      public structRectangle srcRectangle { get; set; }
 
       private List<clsGameObject> GameObjectList { get; }
       public clsGameObject  Parent { get; set; }

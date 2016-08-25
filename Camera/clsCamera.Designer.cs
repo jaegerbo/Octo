@@ -1,6 +1,6 @@
-﻿namespace Octo
+﻿namespace Octo.Camera
 {
-   partial class ctrlRenderScreen
+   partial class clsCamera
    {
       /// <summary> 
       /// Erforderliche Designervariable.

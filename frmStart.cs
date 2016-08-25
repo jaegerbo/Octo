@@ -30,9 +30,9 @@ namespace Octo
       {
          try {
             _watch.Start();
-            _Game = new clsGame(ctrlRenderScreen.ClientSize);
+            _Game = new clsGame(Camera);
             _Game.Input = _Input;
-            ctrlRenderScreen.Game = _Game;
+            Camera.Game = _Game;
          }
          catch (Exception ex)
          {
@@ -62,7 +62,7 @@ namespace Octo
       protected override void OnResize(EventArgs e)
       {
          if (_Game != null) {
-            _Game.ScreenSize = ctrlRenderScreen.ClientSize;
+            _Game.ScreenSize = Camera.ClientSize;
          }
          base.OnResize(e);
       }
@@ -80,7 +80,7 @@ namespace Octo
          try
          {
             _Game.update(_watch.Elapsed);
-            ctrlRenderScreen.Invalidate();
+            Camera.Invalidate();
 
             _watch.Restart();
          }

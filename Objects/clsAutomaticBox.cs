@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 using System.Numerics;
+using Octo.Basics;
 
 namespace Octo.Objects
 {
@@ -29,17 +30,17 @@ namespace Octo.Objects
          // Bereich der Bitmap bestimmen, die gezeichnet werden soll. Dabei alle 10 Frames den Bereich wechseln.
          if (_frameswitch <= 10)
          {
-            srcRectangle = new Rectangle(0, 0, 100, 100);
+            srcRectangle = new structRectangle(0, 0, 100, 100);
          }
          else
          {
-            srcRectangle = new Rectangle(100, 0, 100, 100);
+            srcRectangle = new structRectangle(100, 0, 100, 100);
          }
          if (_frameswitch >= 20 )
          {
             _frameswitch = 0;
          }
-         destRectangle = new Rectangle((int)X, (int)Y, 100, 100);
+         destRectangle = new structRectangle((int)X, (int)Y, 100, 100);
          _frameswitch += 1;
 
          base.update(deltaTime );

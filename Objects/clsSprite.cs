@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Numerics;
-using System.Drawing;
+using Octo.Basics;
 
 namespace Octo.Objects
 {
@@ -21,7 +21,7 @@ namespace Octo.Objects
       public override void update(TimeSpan deltaTime)
       {
          moveBehavior.move(this, deltaTime);
-         destRectangle = new Rectangle((int)X, (int)Y, Width, Height);
+         destRectangle = new structRectangle(X, Y, Width, Height);
          base.update(deltaTime);
       }
       //public override void render(Graphics gr)

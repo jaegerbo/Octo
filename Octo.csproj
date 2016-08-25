@@ -47,21 +47,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Camera\clsCamera.cs" />
+    <Compile Include="Basics\structRectangle.cs" />
+    <Compile Include="Basics\structSize.cs" />
     <Compile Include="Input\clsInput.cs" />
     <Compile Include="Error\clsError.cs" />
+    <Compile Include="Map\clsMap.cs" />
     <Compile Include="Objects\Behaviors\clsAutomaticMove.cs" />
     <Compile Include="Objects\Behaviors\clsManualMove.cs" />
     <Compile Include="Objects\clsAutomaticBox.cs" />
     <Compile Include="Objects\clsBackground.cs" />
-    <Compile Include="Objects\clsBox.cs" />
     <Compile Include="Objects\clsGameObject.cs" />
     <Compile Include="GameLogic\clsGame.cs" />
-    <Compile Include="ctrlRenderScreen.cs">
+    <Compile Include="Camera\clsCamera.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ctrlRenderScreen.Designer.cs">
-      <DependentUpon>ctrlRenderScreen.cs</DependentUpon>
+    <Compile Include="Camera\clsCamera.Designer.cs">
+      <DependentUpon>clsCamera.cs</DependentUpon>
     </Compile>
     <Compile Include="frmStart.cs">
       <SubType>Form</SubType>
@@ -76,8 +77,8 @@
     <Compile Include="Objects\Interfaces\IMove.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="ctrlRenderScreen.resx">
-      <DependentUpon>ctrlRenderScreen.cs</DependentUpon>
+    <EmbeddedResource Include="Camera\clsCamera.resx">
+      <DependentUpon>clsCamera.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStart.resx">
       <DependentUpon>frmStart.cs</DependentUpon>

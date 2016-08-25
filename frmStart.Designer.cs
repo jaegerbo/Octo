@@ -35,7 +35,7 @@
          this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
          this.schließenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
          this.timerGameloop = new System.Windows.Forms.Timer(this.components);
-         this.ctrlRenderScreen = new Octo.ctrlRenderScreen();
+         this.Camera = new Octo.Camera.clsCamera();
          this.statusStrip.SuspendLayout();
          this.menuStrip1.SuspendLayout();
          this.SuspendLayout();
@@ -87,21 +87,21 @@
          this.timerGameloop.Tag = "1000 msec / 25 mSec = 40 FpS";
          this.timerGameloop.Tick += new System.EventHandler(this.timerGameloop_Tick);
          // 
-         // ctrlRenderScreen
+         // Camera
          // 
-         this.ctrlRenderScreen.Dock = System.Windows.Forms.DockStyle.Fill;
-         this.ctrlRenderScreen.Game = null;
-         this.ctrlRenderScreen.Location = new System.Drawing.Point(0, 24);
-         this.ctrlRenderScreen.Name = "ctrlRenderScreen";
-         this.ctrlRenderScreen.Size = new System.Drawing.Size(1032, 510);
-         this.ctrlRenderScreen.TabIndex = 2;
+         this.Camera.Dock = System.Windows.Forms.DockStyle.Fill;
+         this.Camera.Game = null;
+         this.Camera.Location = new System.Drawing.Point(0, 24);
+         this.Camera.Name = "Camera";
+         this.Camera.Size = new System.Drawing.Size(1032, 510);
+         this.Camera.TabIndex = 2;
          // 
          // frmStart
          // 
          this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
          this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          this.ClientSize = new System.Drawing.Size(1032, 556);
-         this.Controls.Add(this.ctrlRenderScreen);
+         this.Controls.Add(this.Camera);
          this.Controls.Add(this.statusStrip);
          this.Controls.Add(this.menuStrip1);
          this.KeyPreview = true;
@@ -124,7 +124,7 @@
       private System.Windows.Forms.MenuStrip menuStrip1;
       private System.Windows.Forms.ToolStripMenuItem dateiToolStripMenuItem;
       private System.Windows.Forms.ToolStripMenuItem schließenToolStripMenuItem;
-      private ctrlRenderScreen ctrlRenderScreen;
+      private Octo.Camera.clsCamera Camera;
       private System.Windows.Forms.Timer timerGameloop;
       private System.Windows.Forms.ToolStripStatusLabel toolStripStatusKoordinaten;
    }
