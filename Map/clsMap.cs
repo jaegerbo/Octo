@@ -20,10 +20,10 @@ namespace Octo.Map
       // Properties
       public int CellCountX;
       public int CellCountY;
-      public const int CELLSIZE = 20;
+      public const int CELLSIZE = 100;
       public clsCamera Camera;
       public bool showCellBorder = true;
-
+      
       // Methoden
       public structSize getSizeInPixel()
       {

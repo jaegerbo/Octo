@@ -37,6 +37,9 @@ namespace Octo.Camera
 
             e.Graphics.Clear(Game.Backcolor);
 
+            // Map rendern
+            renderMap(e.Graphics);
+
             // alle Objekte aus der Objektliste updaten
             foreach (clsGameObject Obj in Game.GameObjectList)
             {
@@ -55,6 +58,18 @@ namespace Octo.Camera
             new clsError(ex);
          }
          base.OnPaint(e);
+      }
+
+      private void renderMap(Graphics gr)
+      {
+         try
+         {
+
+         }
+         catch (Exception ex)
+         {
+            new clsError(ex);
+         }
       }
    }
 }

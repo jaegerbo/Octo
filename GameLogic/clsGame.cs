@@ -17,8 +17,8 @@ namespace Octo.GameLogic
       public clsGame(clsCamera Camera) {
          try
          {
-            //PlaygroundSize = new Size(2000, 2000);
-            Map = new Octo.Map.clsMap(100, 100);
+            // Map erzeugen
+            Map = new Octo.Map.clsMap(20, 20);
 
             GameObjectList = new List<clsGameObject>();
             Backcolor = Color.LightBlue;

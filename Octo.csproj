@@ -52,6 +52,8 @@
     <Compile Include="Input\clsInput.cs" />
     <Compile Include="Error\clsError.cs" />
     <Compile Include="Map\clsMap.cs" />
+    <Compile Include="Map\clsMapCell.cs" />
+    <Compile Include="Map\clsMapCellList.cs" />
     <Compile Include="Objects\Behaviors\clsAutomaticMove.cs" />
     <Compile Include="Objects\Behaviors\clsManualMove.cs" />
     <Compile Include="Objects\clsAutomaticBox.cs" />
