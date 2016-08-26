@@ -24,17 +24,5 @@ namespace Octo.Objects
          destRectangle = new structRectangle(X, Y, Width, Height);
          base.update(deltaTime);
       }
-      //public override void render(Graphics gr)
-      //{
-      //   try
-      //   {
-      //      base.render(gr);
-      //   }
-      //   catch (Exception ex)
-      //   {
-      //      new clsError(ex);
-      //   }
-      //}
-
    }
 }

@@ -7,6 +7,7 @@ using System.Drawing;
 using Octo.Objects;
 using Octo.Map;
 using Octo.Camera;
+using Octo.Basics;
 
 namespace Octo.GameLogic
 {
@@ -35,6 +36,7 @@ namespace Octo.GameLogic
             Ball1.Angle = (float)Math.PI / 4;
             Ball1.Map = Map;
             Ball1.moveBehavior = new clsAutomaticMove();
+            Ball1.moveBehavior.BorderRectangle = new structRectangle(0, 0, Map.getSizeInPixel().Width, Map.getSizeInPixel().Height);
             Ball1.SpriteImage = Image.FromFile("./Assets/Ball.png");
             GameObjectList.Add(Ball1);
 

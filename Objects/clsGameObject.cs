@@ -37,7 +37,6 @@ namespace Octo
       public float Y { get; set; }
       public float Width { get; set; }
       public float Height { get; set; }
-      //public Size Playgroundsize { get; set; }
       public clsMap Map;
       public Color BackColor { get; set; }
       private Image _SpriteImage = null;
@@ -70,15 +69,6 @@ namespace Octo
             }
          }
       }
-      //public virtual void render(Graphics gr) {
-      //   if (GameObjectList != null)
-      //   {
-      //      foreach (clsGameObject Obj in GameObjectList)
-      //      {
-      //         Obj.render(gr);
-      //      }
-      //   }
-      //}
       public List<clsGameObject> getObejctList()
       {
          return GameObjectList;
@@ -100,8 +90,6 @@ namespace Octo
             return false;
          }
       }
-
-      public IMove moveBehavior { get; set; }
 
    }
 }

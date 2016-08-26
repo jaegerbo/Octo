@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Octo.Basics;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
@@ -9,6 +10,22 @@ namespace Octo.Objects
 {
    public class clsManualMove : IMove
    {
+      // Properties
+      structRectangle _BorderRectangle;
+      structRectangle IMove.BorderRectangle
+      {
+         get
+         {
+            return _BorderRectangle; ;
+         }
+
+         set
+         {
+            _BorderRectangle = value;
+         }
+      }
+
+      // Methoden
       public void move(clsGameObjectMoveable obj, TimeSpan deltaTime)
       {
          Vector2 velocity = new Vector2(
