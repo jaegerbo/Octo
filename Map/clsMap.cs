@@ -15,15 +15,26 @@ namespace Octo.Map
       {
          this.CellCountX = CellCountX;
          this.CellCountY = CellCountY;
+
+         // Liste mit den einzelnen Feldern erstellen
+         for(int x = 0; x < CellCountX; x++)
+         {
+            for(int y = 0; y < CellCountY; y++)
+            {
+               clsMapCell MapCell = new Map.clsMapCell(this, x, y);
+               MapCells.Add(MapCell);
+            }
+         }
       }
 
       // Properties
       public int CellCountX;
       public int CellCountY;
-      public const int CELLSIZE = 100;
+      public int CELLSIZE = 100;
       public clsCamera Camera;
       public bool showCellBorder = true;
-      
+      public clsMapCellList MapCells = new clsMapCellList();
+
       // Methoden
       public structSize getSizeInPixel()
       {
